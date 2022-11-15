@@ -1,13 +1,5 @@
 using Flux, Statistics
 
-function and(x1, x2)
-    if x1 == 1 && x2 == 1
-        return 1
-    else 
-        return 0
-    end 
-end
-
 noisy = rand(Float32, 2, 1000)                                 
 truth = map(col -> xor(col...), eachcol(noisy .> 0.5))           
 
